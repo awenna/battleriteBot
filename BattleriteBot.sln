@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleriteBot", "BattleriteBot\BattleriteBot.csproj", "{ADC140B1-5F2B-4609-B31C-4ACC00A372E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTestProject1", "XUnitTestProject1\XUnitTestProject1.csproj", "{7A09F1E9-8999-4766-9FCD-07BD049A754B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BattleriteBotTests", "XUnitTestProject1\BattleriteBotTests.csproj", "{7A09F1E9-8999-4766-9FCD-07BD049A754B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

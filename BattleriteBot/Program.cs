@@ -1,19 +1,18 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
-using BattleriteBot;
 
-namespace Awesome
+namespace BattleriteBot
 {
     class Program
     {
         static void Main(string[] args)
         {
             Console.WriteLine("Bot started!");
-            var key = "";
+            string key;
             if (args.Any())
             {
-                Console.Write("Key found through args.");
+                Console.WriteLine("Key found through args.");
                 key = args[0];
             }
             else

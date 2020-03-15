@@ -8,6 +8,7 @@ namespace BattleriteBot
     {
         void RegisterTG();
         void RegisterDiscord();
+        void AddMessage(Chat chat);
         ChatState GetState(Chat chat);
         ChatState AddSigning(Chat chat, Signing signing);
         void Reset(Chat chat);
@@ -30,6 +31,21 @@ namespace BattleriteBot
         public void RegisterDiscord()
         {
             throw new NotImplementedException("No Discord support.");
+        }
+
+        public void AddMessage(Chat chat)
+        {
+            lock (_states)
+            {
+                if (_states.ContainsKey(chat.Id))
+                {
+                    _states[chat.Id] = ((ChatState)_states[chat.Id]).AddMessage();
+                    return;
+                }
+
+                var state = new ChatState().AddMessage();
+                _states.Add(chat.Id, state);
+            }
         }
 
         public ChatState GetState(Chat chat)

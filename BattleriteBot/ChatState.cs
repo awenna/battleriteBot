@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
 
@@ -9,7 +8,7 @@ namespace BattleriteBot
     {
         public int MessagesSinceLast { get; }
         public ImmutableList<Signing> Signings { get; }
-
+        
         public ChatState()
         {
             MessagesSinceLast = 0;
@@ -47,6 +46,11 @@ namespace BattleriteBot
         public ChatState AddSigning(Signing signing)
         {
             return new ChatState(Signings.Add(signing));
+        }
+
+        public ChatState AddMessage()
+        {
+            return new ChatState(Signings, MessagesSinceLast + 1);
         }
 
         public IEnumerable<Signing> GetSuggestion()

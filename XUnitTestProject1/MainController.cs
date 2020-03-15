@@ -5,7 +5,7 @@ using Shouldly;
 using Telegram.Bot.Types;
 using Xunit;
 
-namespace XUnitTestProject1
+namespace BattleriteBotTests
 {
     public class MainController
     {

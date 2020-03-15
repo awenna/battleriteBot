@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BattleriteBot
 {
@@ -23,14 +24,40 @@ namespace BattleriteBot
             End = end;
         }
 
-        public Signing SetTwos(bool newval)
+        public Signing SetTwos(bool newval, List<DateTime?> times = null)
         {
-            return new Signing(this.Name, newval, Threes, Start, End);
+            return new Signing(Name, newval, Threes, 
+                times == null ? Start : times[0], 
+                times == null ? End : times[1]);
         }
 
-        public Signing SetThrees(bool newval)
+        public Signing SetThrees(bool newval, List<DateTime?> times = null)
         {
-            return new Signing(this.Name, Twos, newval, Start, End);
+            return new Signing(Name, Twos, newval, 
+                times == null ? Start : times[0],
+                times == null ? End : times[1]);
+        }
+
+        public override bool Equals(object obj)
+        {
+            try
+            {
+                var other = (Signing)obj;
+                return Name == other.Name &&
+                       Twos == other.Twos &&
+                       Threes == other.Threes &&
+                       Start == other.Start &&
+                       End == other.End;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }

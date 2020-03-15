@@ -4,8 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 key.txt
-run.sh
-update_and_run.sh
+*.sh
 
 # User-specific files
 *.rsuser
