@@ -2,9 +2,7 @@
 #### Fun / learning project
 #### Personal use tool
 #### Telegram bot
-#### Discord bot (WIP)
 #### Raspberry project
-#### !Work in progress!
 
 ## Description
 The Battlerite Bot is a Telegram (and soon Discord) bot that helps bringing 2-6 people together to play the game Battlerite and fit their schedules together. Battlerite is a team based arena game played either 2v2 or 3v3, either by entering matchmaking as a group of 2 or 3, or "in-house" by gathering 4 or 6 players in one lobby. 
